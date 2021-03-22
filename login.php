@@ -14,14 +14,14 @@
 				<form>
                     <div class="row">
                         <label for="user">Username</label>
-                        <input type="text" name="gender" id="male" value=" "><br>
+                        <input type="text" name="txtUser" value=" "><br>
                     </div>
 					<div class="row">
                         <label for="user">PassWord</label>
-                        <input type="text" name="genderr" id="malle" value=" "><br>
+                        <input type="text" name="txtPass" value=" "><br>
                     </div>
 					<div class="row">
-						<input type="button" name="btn" value="login"/>
+						<input type="button" name="btnLogin" value="login"/>
 					</div>
 				</form>
 			</div>
@@ -29,3 +29,11 @@
 	</div>
 </body>
 <html>
+
+<?php
+	if($_POST['txtUser'] == "admin" && $_POST['txtPass'] == "admin" && isset($_POST['btnLogin'])) {
+		echo "Login success";
+	}
+	else echo "Login fail"
+?>
+
